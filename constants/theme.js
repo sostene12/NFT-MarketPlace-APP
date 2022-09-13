@@ -13,6 +13,8 @@ export const SIZES = {
   medium: 16,
   large: 18,
   extraLarge: 24,
+  maxMin: 28,
+  maximum: 40,
 };
 
 export const FONTS = {

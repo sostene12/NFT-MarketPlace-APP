@@ -1,18 +1,48 @@
 import { View, Text, Image } from "react-native";
 import { SIZES, COLORS, FONTS, SHADOWS, assets } from "../constants";
 
-export const NFTTitle = () => {
+export const NFTTitle = ({ title, subTitle, SubTitleSize, titleSize }) => {
   return (
     <View>
-      <Text>NFTTitle</Text>
+      <Text
+        style={{
+          fontFamily: FONTS.semiBold,
+          fontSize: titleSize,
+          color: COLORS.primary,
+        }}
+      >
+        {title}
+      </Text>
+      <Text
+        style={{
+          fontFamily: FONTS.regular,
+          fontSize: SubTitleSize,
+          color: COLORS.primary,
+        }}
+      >
+        {subTitle}
+      </Text>
     </View>
   );
 };
 
-export const EthPrice = () => {
+export const EthPrice = ({ price }) => {
   return (
-    <View>
-      <Text>EthPrice</Text>
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <Image
+        source={assets.eth}
+        resizeMode="contain"
+        style={{ width: 20, height: 20, marginRight: 2 }}
+      />
+      <Text
+        style={{
+          fontFamily: FONTS.medium,
+          fontSize: SIZES.font,
+          color: COLORS.primary,
+        }}
+      >
+        {price}
+      </Text>
     </View>
   );
 };
@@ -48,7 +78,6 @@ export const EndDate = () => {
     <View
       style={{
         paddingHorizontal: SIZES.font,
-        paddingVertical: SIZES.base,
         backgroundColor: COLORS.white,
         justifyContent: "center",
         alignItems: "center",
@@ -85,7 +114,7 @@ export const SubInfo = () => {
       style={{
         width: "100%",
         paddingHorizontal: SIZES.font,
-        marginTop: -SIZES.extraLarge,
+        marginTop: -SIZES.maxMin,
         flexDirection: "row",
         justifyContent: "space-between",
       }}
