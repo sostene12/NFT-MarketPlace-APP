@@ -41,5 +41,3 @@ const App = () => {
 };
 
 export default App;
-
-// start from 1hr 05 min
